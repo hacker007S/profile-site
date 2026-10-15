@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical interests - Profile site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="inner">
+      <a class="site-name" href="index.html">[Student Name]</a>
+      <nav class="site-nav" aria-label="Site">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <h1>Technical interests</h1>
+    <p>These are the areas of computing I enjoy most and want to work in. They are not tutorials, just a short note on why each one matters to me.</p>
+
+    <section class="interest">
+      <img src="images/interest-accessibility.svg" width="480" height="300">
+      <div>
+        <h2>Accessible web development</h2>
+        <p>I am interested in building websites that work for everyone, including people who use a screen reader, navigate with a keyboard only, or need larger text and higher contrast. Good accessibility is mostly good engineering: clear structure, sensible defaults and testing with the tools people actually use.</p>
+        <p>This site is my first attempt to build something to the WCAG 2.2 AA standard from the start rather than patching it at the end. The accessibility report that goes with it records what I found with WAVE and what I changed.</p>
+      </div>
+    </section>
+
+    <section class="interest">
+      <img src="images/interest-data.svg" width="480" height="300" alt="Illustration labelled Data analysis">
+      <div>
+        <h2>Data analysis with Python</h2>
+        <p>I like taking a messy dataset and turning it into something a person can act on. In my modules I have used Python with pandas and matplotlib to clean data, explore it and present findings in a notebook. What I enjoy is the point where a chart makes a pattern obvious that a table of numbers hid.</p>
+        <p>I would like to take this further into machine learning during my placement year, particularly models that are explainable enough for a non-technical reader to trust.</p>
+      </div>
+    </section>
+
+    <section class="interest">
+      <img src="images/interest-security.svg" width="480" height="300" alt="Illustration labelled Cyber security">
+      <div>
+        <h2>Cyber security fundamentals</h2>
+        <p>Security is the part of computing where small mistakes have the biggest consequences. I am interested in how everyday applications get broken, through things like injection, weak authentication and poor input validation, and in the habits that stop that happening in the first place.</p>
+        <p>On this site that interest shows up in a small way: the contact form checks its input on the client side and never trusts an empty or malformed field.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="inner">
+      <p>Built by [Student Name] for 5COM2002 using HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

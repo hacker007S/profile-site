@@ -196,3 +196,28 @@ img {
     grid-template-columns: 16rem minmax(0, 1fr);
   }
 }
+
+/* Technical interests page */
+.interest {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem 1.5rem;
+  align-items: start;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.interest img {
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.interest h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 40rem) {
+  .interest {
+    grid-template-columns: 16rem minmax(0, 1fr);
+  }
+}
