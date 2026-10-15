@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio - Profile site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="inner">
+      <a class="site-name" href="index.html">[Student Name]</a>
+      <nav class="site-nav" aria-label="Site">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <h1>Portfolio</h1>
+    <p>A selection of work from my course and my own time. Use <strong>Quick view</strong> for a short summary in a pop-up, or follow the link for the full details page.</p>
+
+    <ul class="cards">
+      <li class="card">
+        <h2 id="p1-title">Student timetable app</h2>
+        <p>A small web app that turns a module list into a weekly timetable with clash warnings. HTML, CSS and JavaScript, data kept in local storage.</p>
+        <p class="card-actions">
+          <button type="button" class="quick-view" data-project="p1" aria-haspopup="dialog">Quick view</button>
+          <a class="more" href="project.html#timetable">Project details</a>
+        </p>
+      </li>
+      <li class="card">
+        <h2 id="p2-title">Bus arrivals data analysis</h2>
+        <p>A Python notebook that cleaned a month of open bus arrival data and showed which routes were most often late, with charts for a non-technical reader.</p>
+        <p class="card-actions">
+          <button type="button" class="quick-view" data-project="p2" aria-haspopup="dialog">Quick view</button>
+          <a class="more" href="project.html#bus-data">Project details</a>
+        </p>
+      </li>
+      <li class="card">
+        <h2 id="p3-title">Password strength checker</h2>
+        <p>A command-line tool written in Python that scores a password against common patterns and a breached-password list, and explains its reasoning.</p>
+        <p class="card-actions">
+          <button type="button" class="quick-view" data-project="p3" aria-haspopup="dialog">Quick view</button>
+          <a class="more" href="project.html#password">Project details</a>
+        </p>
+      </li>
+    </ul>
+
+    <!-- Quick view pop-up. Hidden until a Quick view button is pressed. -->
+    <div class="modal-backdrop" id="modal-backdrop" hidden></div>
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <button type="button" class="modal-close" id="modal-close"></button>
+      <h2 id="modal-title">Project</h2>
+      <div id="modal-body"></div>
+      <p><a id="modal-link" href="project.html">Go to project details</a></p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="inner">
+      <p>Built by [Student Name] for 5COM2002 using HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

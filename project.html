@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project details - Profile site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="inner">
+      <a class="site-name" href="index.html">[Student Name]</a>
+      <nav class="site-nav" aria-label="Site">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <h1>Project details</h1>
+    <p>Full details of the projects listed on the <a href="portfolio.html">portfolio page</a>. This is a holding page for now; the project artefacts themselves are not included.</p>
+
+    <nav aria-label="Projects on this page">
+      <ul>
+        <li><a href="#timetable">Student timetable app</a></li>
+        <li><a href="#bus-data">Bus arrivals data analysis</a></li>
+        <li><a href="#password">Password strength checker</a></li>
+      </ul>
+    </nav>
+
+    <article id="timetable" class="project">
+      <h2>Student timetable app</h2>
+      <dl class="meta">
+        <dt>When</dt><dd>Semester A, year 1</dd>
+        <dt>Built with</dt><dd>HTML, CSS, JavaScript</dd>
+        <dt>Role</dt><dd>Solo project</dd>
+      </dl>
+      <h3>What it does</h3>
+      <p>You enter your modules and their sessions, and the app draws a weekly grid. If two sessions overlap it highlights the clash and lists both so you can decide which to attend. Everything is stored in the browser so there is no sign-up.</p>
+      <h3>What I learned</h3>
+      <p>Drawing a grid that still works on a phone was harder than the logic. I ended up switching to a list view below a certain width, which is also easier for a screen reader to follow.</p>
+    </article>
+
+    <article id="bus-data" class="project">
+      <h2>Bus arrivals data analysis</h2>
+      <dl class="meta">
+        <dt>When</dt><dd>Semester B, year 1</dd>
+        <dt>Built with</dt><dd>Python, pandas, matplotlib, Jupyter</dd>
+        <dt>Role</dt><dd>Group of three, I did the cleaning and charts</dd>
+      </dl>
+      <h3>What it does</h3>
+      <p>Takes a month of open data on bus arrivals, removes duplicate and malformed records, and works out the average delay per route and per hour of the day. The output is a short set of charts with plain-English captions.</p>
+      <h3>What I learned</h3>
+      <p>Most of the time went on cleaning. Timestamps came in three formats and a few routes changed number part way through the month. Writing down every cleaning decision made the final write-up much easier to defend.</p>
+    </article>
+
+    <article id="password" class="project">
+      <h2>Password strength checker</h2>
+      <dl class="meta">
+        <dt>When</dt><dd>Own time, summer</dd>
+        <dt>Built with</dt><dd>Python</dd>
+        <dt>Role</dt><dd>Solo project</dd>
+      </dl>
+      <h3>What it does</h3>
+      <p>A command-line tool that scores a password from 0 to 4. It checks length, character variety, keyboard patterns and whether the password appears in a list of known breached passwords. It explains each point lost so the user knows what to change.</p>
+      <h3>What I learned</h3>
+      <p>Explaining the score turned out to matter more than the score itself. Early testers ignored a bare number but acted on a sentence like "this is in a list of leaked passwords".</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="inner">
+      <p>Built by [Student Name] for 5COM2002 using HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
