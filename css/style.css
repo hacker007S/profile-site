@@ -339,3 +339,66 @@ button:hover {
 .meta dd {
   margin: 0;
 }
+
+/* Contact form */
+.contact-form {
+  max-width: 36rem;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.field input,
+.field textarea {
+  font: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid var(--text-muted);
+  border-radius: 0.25rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.field .hint {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.field .error {
+  margin: 0.25rem 0 0;
+  color: var(--error);
+  font-weight: bold;
+}
+
+.field .error:empty {
+  display: none;
+}
+
+.field.invalid input,
+.field.invalid textarea {
+  border-color: var(--error);
+}
+
+.status:empty {
+  display: none;
+}
+
+.status {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 4px solid var(--success);
+  background: var(--bg-alt);
+  color: var(--text);
+}
+
+.status.failed {
+  border-left-color: var(--error);
+}
