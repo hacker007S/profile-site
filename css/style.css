@@ -78,10 +78,10 @@ textarea:focus-visible,
 }
 
 .site-name {
+  margin: 0;
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--text);
-  text-decoration: none;
 }
 
 .site-nav ul {
@@ -255,7 +255,7 @@ img {
 }
 
 .card .more {
-  color: #9aa5b1;
+  color: var(--brand);
 }
 
 button {
