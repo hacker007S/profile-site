@@ -221,3 +221,121 @@ img {
     grid-template-columns: 16rem minmax(0, 1fr);
   }
 }
+
+/* Portfolio cards */
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  background: var(--bg-alt);
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.card .more {
+  color: #9aa5b1;
+}
+
+button {
+  font: inherit;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--brand);
+  border-radius: 0.25rem;
+  background: var(--brand);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
+}
+
+/* Quick view pop-up */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90vw, 32rem);
+  max-height: 85vh;
+  overflow: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  z-index: 30;
+}
+
+.modal h2 {
+  margin-top: 0;
+  padding-right: 2.5rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.modal-close::before {
+  content: "\00d7";
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Project details page */
+.project {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.25rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.meta dt {
+  font-weight: bold;
+}
+
+.meta dd {
+  margin: 0;
+}
