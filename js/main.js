@@ -104,3 +104,64 @@
   closeButton.addEventListener("click", close);
   backdrop.addEventListener("click", close);
 })();
+
+// Contact form validation. Client side only; nothing is sent anywhere.
+(function contactForm() {
+  var form = document.getElementById("contact-form");
+  if (!form) {
+    return;
+  }
+  var status = document.getElementById("form-status");
+
+  function setError(id, message) {
+    var input = document.getElementById(id);
+    var error = document.getElementById(id + "-error");
+    error.textContent = message;
+    input.parentNode.classList.toggle("invalid", message !== "");
+    input.setAttribute("aria-invalid", message === "" ? "false" : "true");
+  }
+
+  function validEmail(value) {
+    // Simple check: something, an @, something, a dot, something.
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var message = form.message.value.trim();
+    var firstBad = null;
+
+    setError("name", "");
+    setError("email", "");
+    setError("message", "");
+
+    if (name === "") {
+      setError("name", "Please enter your name.");
+      firstBad = firstBad || form.name;
+    }
+    if (email === "") {
+      setError("email", "Please enter your email address.");
+      firstBad = firstBad || form.email;
+    } else if (!validEmail(email)) {
+      setError("email", "That does not look like an email address. Check it and try again.");
+      firstBad = firstBad || form.email;
+    }
+    if (message === "") {
+      setError("message", "Please enter a message or question.");
+      firstBad = firstBad || form.message;
+    }
+
+    if (firstBad) {
+      status.className = "status failed";
+      status.textContent = "The form was not sent. Please correct the highlighted fields.";
+      firstBad.focus();
+      return;
+    }
+
+    status.className = "status";
+    status.textContent = "Thank you, " + name + ". Your message has been received and I will reply to " + email + ".";
+    form.reset();
+  });
+})();

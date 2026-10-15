@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact me - Profile site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="inner">
+      <a class="site-name" href="index.html">[Student Name]</a>
+      <nav class="site-nav" aria-label="Site">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <h1>Contact me</h1>
+    <p>If you would like to talk about placements, projects or anything on this site, leave your details and a message below. Fields marked with an asterisk (*) are required.</p>
+
+    <form id="contact-form" class="contact-form" novalidate>
+      <div class="field">
+        <label for="name">Your name *</label>
+        <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+        <p class="error" id="name-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Your email address *</label>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint email-error">
+        <p class="hint" id="email-hint">For example, name@example.com</p>
+        <p class="error" id="email-error"></p>
+      </div>
+
+      <div class="field">
+        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Phone number (optional)">
+      </div>
+
+      <div class="field">
+        <label for="message">Your message or question *</label>
+        <textarea id="message" name="message" rows="6" required aria-describedby="message-error"></textarea>
+        <p class="error" id="message-error"></p>
+      </div>
+
+      <p>
+        <button type="submit">Send message</button>
+      </p>
+
+      <div class="status" id="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <div class="inner">
+      <p>Built by [Student Name] for 5COM2002 using HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
