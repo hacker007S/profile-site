@@ -175,3 +175,24 @@ img {
     animation: none !important;
   }
 }
+
+/* About page */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 16rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+@media (min-width: 40rem) {
+  .about {
+    grid-template-columns: 16rem minmax(0, 1fr);
+  }
+}
