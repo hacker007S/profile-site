@@ -79,8 +79,8 @@ textarea:focus-visible,
 
 .site-name {
   margin: 0;
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.125rem;
+  letter-spacing: 0.04em;
   color: var(--text);
 }
 
