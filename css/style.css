@@ -255,7 +255,7 @@ img {
 }
 
 .card .more {
-  color: #9aa5b1;
+  color: var(--brand);
 }
 
 button {
